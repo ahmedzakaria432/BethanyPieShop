@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Redirect</Title>
+            <Shortcut>IRepo</Shortcut>
+            <Author>Ahmed zakaria</Author>
+            <Description> this snippet to create IRepository</Description>
+            <!--<SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>-->
+
+        </Header>
+        <Snippet>
+            <Declarations>
+                
+               <Literal>
+                <ID>EntityName</ID>
+                   
+                <ToolTip></ToolTip>
+                <Default>EntityName</Default>
+               </Literal>
+                <Literal>
+                    <ID>Save</ID>
+
+                    <ToolTip>this changes name of save method</ToolTip>
+                    <Default>save</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp">
+                <![CDATA[public interface IRepository<TEntity>
+    {
+        IEnumerable<TEntity> GetAll();
+        TEntity GetById(int ID);
+        void Insert(TEntity $EntityName$);
+        void Update(TEntity $EntityName$);
+        void Delete(int $EntityName$Id);
+        void $Save$();
+      
+    }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,12 @@
+@model HomeViewModel
+@if (TempData["CheckoutCompleteMessage"]!=null)
+{
+    <span class="alert alert-info">@TempData["CheckoutCompleteMessage"]</span>
+}
+<partial name="_Carousel" />
+
+<div class="row"></div>
+@foreach (var item in Model)
+{
+    <partial name="_PieCard" model="item" />
+}
